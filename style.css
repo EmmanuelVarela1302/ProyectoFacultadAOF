@@ -1,0 +1,185 @@
+* {
+    /*Reseteo de valores por defecto*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-color: #1a1a1a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+img {
+    width: 100px;
+    height: 100px;
+    /*Mantiene la imagen dentro de las proporciones*/
+    object-fit: cover;
+}
+.encabezado {
+    background-color: orange;
+    width: 100%;
+    padding: 1rem;
+    /*Control de herencia*/
+    display: flex;
+    /*Logo arriba, botones abajo*/
+    flex-direction: column;
+    align-items: center;
+}
+.encabezado img {
+    border-radius: 50%;
+    /*Arriba y abajo - Costados*/
+    margin: 10px 0;
+    width: 120px;
+    height: 120px;
+}
+.botones {
+    display: flex;
+    /*Botones en columna si no entran horizontalmente*/
+    flex-wrap: wrap;
+    /*Horizontales con espacio entre ellos*/
+    justify-content: center;
+    gap: 1rem;
+}
+
+.botones button {
+    background-color: #f5f5dc; 
+    border: none;
+    padding: 0.6rem 1.2rem;
+    width: 200px;
+    border-radius: 8px;
+    /*Cambia de flechita a manito*/
+    cursor: pointer;
+    color: #ff6608;
+    font-weight: bold;
+    /*Transicion suave*/
+    transition: background-color 0.3s ease;
+}
+/*Cambio de diseño con el cursor arriba de los botones*/
+.botones button:hover {
+    background-color: #ff6608;
+    color: white;
+}
+
+.presentacion {
+    display: flex;
+    background-color: orange;
+    justify-content: center;
+}
+
+.presentacion img {
+    width: 100%;
+    height: 400px;
+    /*Imagen proporcional al tamaño establecido*/
+    object-fit: cover;
+    margin: 10px;
+}
+
+#productos {
+    background-color: #d3d3d3; 
+    /*Sentido agujas del reloj*/
+    padding: 2rem 1rem 3.5rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+.tituloProductos {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    color: #ff6608;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*Se expanden/encogen según el espacio, con base de 250px */
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.producto p {
+    margin-top: 0.5rem;
+    color: #ff6608;
+    font-weight: 600;
+}
+.productosDigitales {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-radius: 12px;
+}
+
+.productosDigitales img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    /*Sombra al elemento 
+    desplazamientoX desplazamientoY desenfoque color*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.productosDigitales img:hover {
+    /*Agranda la imagen al 105% de su tamaño original (un 5% más grande)*/
+    transform: scale(1.05);
+}
+
+.registro {
+    background-color: #ff6608;
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.registro h2 {
+    margin-bottom: 1rem;
+}
+
+.registro input {
+    width: 80%;
+    max-width: 400px;
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 6px;
+}
+
+.registro button {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-color: white;
+    padding: 0.7rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registro button:hover {
+    background-color: #ff6608;
+    color: white;
+}
+
+footer {
+    width: 100%;
+    background-color:white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+footer .links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+footer a{
+    color: #ff6608;
+    font-size: 0.9rem;
+}
